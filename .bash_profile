@@ -9,7 +9,7 @@ function prompt {
     local GREEN_WHITE="\[\033[37;42m\]"
     local RESETCOLOR="\[\e[00m\]"
 
-    # Customize primary prompt: <current dir>(branch)$ + colors
+    # Customize primary prompt: <curent time><current dir>(branch) + styles
     function parse_git_branch { 
         git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/' 
     } 
